@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+  <form method="post" novalidate>
+    {% csrf_token %}
+    <div class="row">
+      <div class="col-6">
+        {{ form.apple|as_crispy_field }}
+      </div>
+      <div class="col-6">
+        {{ form.stretching|as_crispy_field }}
+      </div>
+      <div class="col-6">
+        {{ form.orange|as_crispy_field }}
+      </div>
+      <div class="col-6">
+        {{ form.pushups|as_crispy_field }}
+      </div>
+      <div class="col-6">
+        {{ form.banana|as_crispy_field }}
+      </div>
+      <div class="col-6">
+        {{ form.lifting|as_crispy_field }}
+      </div>
+      <div class="col-6">
+        {{ form.onion|as_crispy_field }}
+      </div>
+      <div class="col-6">
+        {{ form.walking|as_crispy_field }}
+      </div>
+      <div class="col-6">
+        {{ form.carrot|as_crispy_field }}
+      </div>
+      <div class="col-6">
+        {{ form.running|as_crispy_field }}
+      </div>
+      <div class="col-6">
+        {{ form.rice|as_crispy_field }}
+      </div>
+      <div class="col-6">
+        <br>
+      </div>
+      <div class="col-6">
+        {{ form.fish|as_crispy_field }}
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-success" style="text-align:center;">Submitt</button>
+   
+
+  </form>
+{% endblock %}
